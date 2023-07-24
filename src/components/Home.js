@@ -19,9 +19,9 @@ const Home = () => {
         alt="logo"
       />
       <div className="Home-Title">당신의 찰떡궁합 운명의 상대는?</div>
-      <div className="Home-Subtitle">영화/드라마 캐릭터 남자 편</div>
+      <div className="Home-Subtitle">영화/드라마 캐릭터 여자 편</div>
       <img
-        src="https://static.kinolights.com/mbti/202307-fate/male-start.png"
+        src="https://static.kinolights.com/mbti/202307-fate/female-start.png"
         className="Home-StartImage"
         alt="start"
       />

@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import { backgroundColor, color } from "./constant";
 import "./Result.css";
 
-const utm = "utm_source=kinolights&utm_medium=mbti&utm_campaign=202307_fate_male";
+const utm = "utm_source=kinolights&utm_medium=mbti&utm_campaign=202307_fate_female";
 const data = [
   {
     title: "하쿠",
@@ -201,12 +201,12 @@ const Result = () => {
           <Button
             className="Result-Button"
             component="a"
-            href="https://mbti-fate-female.kinolights.com"
+            href="https://mbti-fate-male.kinolights.com"
             disableRipple
             disableFocusRipple
             sx={emphasisButtonStyle}
           >
-            여자 ver 테스트 하기
+            남자 ver 테스트 하기
           </Button>
           <div className="Result-Share">친구에게 공유하기</div>
           <IconButton
@@ -215,7 +215,7 @@ const Result = () => {
             sx={{ backgroundColor: "rgba(37, 48, 74, 0.2)" }}
             onClick={() =>
               navigator.clipboard
-                .writeText(`https://mbti-fate-male.kinolights.com/result/${id}`)
+                .writeText(`https://mbti-fate-female.kinolights.com/result/${id}`)
                 .then(() => alert("주소가 복사되었습니다.\n원하는 곳에 붙여넣기 해주세요."))
             }
           >
