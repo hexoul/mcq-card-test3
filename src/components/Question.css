@@ -1,0 +1,50 @@
+.Question {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  margin-bottom: 5rem;
+}
+
+.Question-StepLabel {
+  width: 60vmin;
+  margin-top: 2rem;
+  color: gray;
+  font-size: medium;
+}
+
+.Question-Stepper {
+  width: 65vmin;
+}
+
+.Question-Image {
+  width: 70vmin;
+  border-radius: 15px;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  pointer-events: none;
+}
+
+.Question-Number {
+  font-size: xx-large;
+}
+
+.Question-Label {
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  font-size: medium;
+}
+
+.Question-Choice {
+  width: 70vmin;
+  height: 4rem;
+  white-space: pre-wrap;
+}
+
+@media (min-width: 1024px) {
+  .Question-Image {
+    width: 30rem;
+  }
+}

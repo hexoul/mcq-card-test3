@@ -1,0 +1,66 @@
+.Result {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: medium;
+}
+
+.Result-Title {
+  font-size: large;
+}
+
+.Result-Subtitle {
+  font-size: x-large;
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.Result-Description {
+  margin-top: 1.5rem;
+}
+
+.Result-Description > a {
+  color: black;
+}
+
+.Result-Box {
+  width: 75vmin;
+}
+
+.Result-Card {
+  width: 65vmin;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(200, 200, 200, 0.8) 0px 10px 20px 0.5px;
+  white-space: pre-wrap;
+  margin-top: 10rem;
+  margin-bottom: 1.5rem;
+  padding: 20px 5vmin 50px;
+}
+
+.Result-Share {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.Result-Button {
+  width: 50vmin;
+  height: 3rem;
+}
+
+@media (min-width: 640px) {
+  .Result-Box {
+    width: 450px;
+  }
+
+  .Result-Card {
+    width: 350px;
+  }
+
+  .Result-Button {
+    width: 300px;
+  }
+}
