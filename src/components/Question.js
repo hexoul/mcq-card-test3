@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import MobileStepper from "@mui/material/MobileStepper";
 import Button from "@mui/material/Button";
 
@@ -100,6 +100,7 @@ const choiceButtonStyle = {
 
 const Question = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [mbtiCount, setMbtiCount] = useState({
     e: 0,
@@ -138,23 +139,23 @@ const Question = () => {
     if (mbtiCount.j > mbtiCount.p) j = true;
     else p = true;
 
-    if (e && n && f && j) navigate("/result/0");
-    else if (e && n && t && p) navigate("/result/1");
-    else if (e && n && f && p) navigate("/result/2");
-    else if (e && n && t && j) navigate("/result/3");
-    else if (e && s && f && p) navigate("/result/4");
-    else if (e && s && f && j) navigate("/result/5");
-    else if (e && s && t && p) navigate("/result/6");
-    else if (e && s && t && j) navigate("/result/7");
-    else if (i && n && f && p) navigate("/result/8");
-    else if (i && n && f && j) navigate("/result/9");
-    else if (i && n && t && p) navigate("/result/10");
-    else if (i && n && t && j) navigate("/result/11");
-    else if (i && s && f && p) navigate("/result/12");
-    else if (i && s && f && j) navigate("/result/13");
-    else if (i && s && t && p) navigate("/result/14");
-    else if (i && s && t && j) navigate("/result/15");
-  }, [activeStep, mbtiCount, done, navigate]);
+    if (e && n && f && j) navigate(`/result/0${location.search}`);
+    else if (e && n && t && p) navigate(`/result/1${location.search}`);
+    else if (e && n && f && p) navigate(`/result/2${location.search}`);
+    else if (e && n && t && j) navigate(`/result/3${location.search}`);
+    else if (e && s && f && p) navigate(`/result/4${location.search}`);
+    else if (e && s && f && j) navigate(`/result/5${location.search}`);
+    else if (e && s && t && p) navigate(`/result/6${location.search}`);
+    else if (e && s && t && j) navigate(`/result/7${location.search}`);
+    else if (i && n && f && p) navigate(`/result/8${location.search}`);
+    else if (i && n && f && j) navigate(`/result/9${location.search}`);
+    else if (i && n && t && p) navigate(`/result/10${location.search}`);
+    else if (i && n && t && j) navigate(`/result/11${location.search}`);
+    else if (i && s && f && p) navigate(`/result/12${location.search}`);
+    else if (i && s && f && j) navigate(`/result/13${location.search}`);
+    else if (i && s && t && p) navigate(`/result/14${location.search}`);
+    else if (i && s && t && j) navigate(`/result/15${location.search}`);
+  }, [activeStep, mbtiCount, done, location, navigate]);
 
   const firstChoiceHandler = useCallback(() => {
     if (activeStep >= steps || done) return;

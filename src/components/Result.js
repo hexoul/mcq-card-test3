@@ -63,7 +63,8 @@ const data = [
     title: "메이브",
     description: `<b>"우린 다 불순한 행동을 하지만, 그렇다고 악인은 아니예요."</b>\n\n\n성실한 당신은 당신을 존중해줄 수 있는 헌신적인 사람을 원하는군요!\n<a href="https://kinolights.com/title/79903?${utm}">&lt;오티스의 비밀 상담소&gt;</a> 속 메이브가 잘 맞을 것으로 보여요.\n\n\n짙은 화장을 한 메이브는 반항적인 겉모습과는 다르게\n당신의 속마음을 이끌어낼 수 있는 믿을만한 애인이 되어줄 거예요.\n자신의 오빠를 위해 대신 퇴학을 당하기도 하고, 오티스가 자신감을 가질 수 있도록 옆에 있어주는 등\n사랑하는 사람들에게는 헌신적인 모습을 보여줘요.\n당신이 좋아하는 스타일이 아닌가요? 👀\n\n\n당돌한 당신의 부족한 부분을 채워줄 메이브는 분명 당신이 꿈꾸는 이상적인 파트너일 거예요!`,
     description2: `💔 당신과 맞지 않는 캐릭터\n\n<a href="https://kinolights.com/title/76158?${utm}">&lt;작은 아씨들&gt;</a> <b>조</b>`,
-    description3: "본인의 세상에 빠져있는 인물과의 연애는 당신을 답답하게 할 거예요.",
+    description3:
+      "본인의 세상에 빠져있는 인물과의 연애는 당신을 답답하게 할 거예요.",
   },
   {
     title: "주디 레이번 홉스",
@@ -111,7 +112,8 @@ const data = [
     title: "헤르미온느 그레인저",
     description: `<b>"닥쳐 말포이!"</b>\n\n\n고양이 같은 당신은 어른스러운 매력의 사람을 원하는군요!\n<a href="https://kinolights.com/title/6051?${utm}">&lt;해리포터&gt;</a> 속 헤르미온느 그레인저와 잘 맞을 것으로 보여요.\n\n\n헤르미온느 그레인저는 옳고 그름이 뚜렷하고 똑똑한 인물이에요.\n까칠한 듯 보이지만 기본적으로 배려심이 많은 성격이라 다정한 내면을 가지고 있죠.\n당신에게 끊임없이 새로운 지식을 제공해주고, 즐거운 대화거리를 이어나가는 연인이 될 거예요.\n당신이 좋아하는 스타일이 아닌가요? 👀\n\n\n헤르미온느 그레인저는 예민한 당신의 취향을 충족시킬 이상적인 파트너일 거예요!`,
     description2: `💔 당신과 맞지 않는 캐릭터\n\n<a href="https://kinolights.com/title/12183?${utm}">&lt;겨울왕국&gt;</a> <b>엘사</b>`,
-    description3: "삶에 관한 고민이 많은 스타일의 연인은 당신과 맞지 않을 거예요.",
+    description3:
+      "삶에 관한 고민이 많은 스타일의 연인은 당신과 맞지 않을 거예요.",
   },
   {
     title: "바넬로피",
@@ -145,6 +147,7 @@ const emphasisButtonStyle = {
 const Result = () => {
   const location = useLocation();
   const id = +location.pathname.split("/")[2];
+  const fromKakao = location.search.includes("from=kakao");
 
   return (
     <div className="Result">
@@ -162,7 +165,7 @@ const Result = () => {
       >
         <div className="Result-Card">
           <div className="Result-Title">당신의 운명은...</div>
-          <div className="Result-Subtitle">{`${data[id].title}`}</div>
+          <div className="Result-Subtitle">{data[id].title}</div>
           <Divider
             variant="middle"
             sx={{
@@ -221,7 +224,7 @@ const Result = () => {
           <Button
             className="Result-Button"
             component="a"
-            href={`https://kinolights.com/community/post/kVV3hYkBlTLepY8dQ8GC?${utm}`} // FIXME
+            href={`https://kinolights.com/community/post/yOcfjIkBp0HgxmWux5wy?${utm}`}
             disableRipple
             disableFocusRipple
             sx={emphasisButtonStyle}
