@@ -262,7 +262,7 @@ const Question = () => {
         sx={stepperStyle}
       />
       <img
-        src={`https://static.kinolights.com/mbti/202307-fate/q${activeStep + 1}.jpg`}
+        src={`https://static.kinolights.com/mbti/202307-fate/q${activeStep + 1}.png`}
         className="Question-Image"
         alt="start"
       />
