@@ -207,7 +207,7 @@ const Result = () => {
             component="img"
             alignItems="center"
             justifyContent="center"
-            src={`${cdnPrefix}/female-r${data[id].imgIdx}.jpg`}
+            src={`${cdnPrefix}/female-r${data[id].imgIdx}.png`}
             sx={{
               width: "75%",
               backgroundRepeat: "no-repeat",

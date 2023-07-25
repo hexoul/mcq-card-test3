@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MobileStepper from "@mui/material/MobileStepper";
 import Button from "@mui/material/Button";
 
-import { backgroundColor, color } from "./constant"
+import { backgroundColor, color, cdnPrefix } from "./constant"
 import "./Question.css";
 
 const steps = 12;
@@ -262,7 +262,7 @@ const Question = () => {
         sx={stepperStyle}
       />
       <img
-        src={`https://static.kinolights.com/mbti/202307-fate/q${activeStep + 1}.png`}
+        src={`${cdnPrefix}/q${activeStep + 1}.png`}
         className="Question-Image"
         alt="start"
       />
