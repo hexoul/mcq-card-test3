@@ -173,13 +173,13 @@ const Question = () => {
         mbtiCount.j++;
         break;
       case 4:
-        mbtiCount.f++;
+        mbtiCount.t++;
         break;
       case 5:
-        mbtiCount.j++;
+        mbtiCount.p++;
         break;
       case 6:
-        mbtiCount.e++;
+        mbtiCount.i++;
         break;
       case 7:
         mbtiCount.s++;
@@ -188,13 +188,13 @@ const Question = () => {
         mbtiCount.e++;
         break;
       case 9:
-        mbtiCount.s++;
+        mbtiCount.n++;
         break;
       case 10:
-        mbtiCount.f++;
+        mbtiCount.t++;
         break;
       case 11:
-        mbtiCount.j++;
+        mbtiCount.p++;
         break;
       default:
         break;
@@ -220,13 +220,13 @@ const Question = () => {
         mbtiCount.p++;
         break;
       case 4:
-        mbtiCount.t++;
+        mbtiCount.f++;
         break;
       case 5:
-        mbtiCount.p++;
+        mbtiCount.j++;
         break;
       case 6:
-        mbtiCount.i++;
+        mbtiCount.e++;
         break;
       case 7:
         mbtiCount.n++;
@@ -235,13 +235,13 @@ const Question = () => {
         mbtiCount.i++;
         break;
       case 9:
-        mbtiCount.n++;
+        mbtiCount.s++;
         break;
       case 10:
-        mbtiCount.t++;
+        mbtiCount.f++;
         break;
       case 11:
-        mbtiCount.p++;
+        mbtiCount.j++;
         break;
       default:
         break;
