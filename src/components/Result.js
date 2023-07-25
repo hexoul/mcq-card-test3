@@ -175,7 +175,14 @@ const Result = () => {
           />
           <div
             className="Result-Description"
-            dangerouslySetInnerHTML={{ __html: data[id].description }}
+            dangerouslySetInnerHTML={{
+              __html: fromKakao
+                ? data[id].description.replace(
+                    "utm_source=kinolights",
+                    "utm_source=kakao"
+                  )
+                : data[id].description,
+            }}
           />
           <Divider
             variant="middle"
@@ -188,7 +195,14 @@ const Result = () => {
           />
           <div
             className="Result-Description"
-            dangerouslySetInnerHTML={{ __html: data[id].description2 }}
+            dangerouslySetInnerHTML={{
+              __html: fromKakao
+                ? data[id].description2.replace(
+                    "utm_source=kinolights",
+                    "utm_source=kakao"
+                  )
+                : data[id].description2,
+            }}
           />
           <Box
             component="img"
@@ -224,7 +238,9 @@ const Result = () => {
           <Button
             className="Result-Button"
             component="a"
-            href={`https://kinolights.com/community/post/yOcfjIkBp0HgxmWux5wy?${utm}`}
+            href={`https://kinolights.com/community/post/yOcfjIkBp0HgxmWux5wy?${
+              fromKakao ? utm.replace("kinolights", "kakao") : utm
+            }`}
             disableRipple
             disableFocusRipple
             sx={emphasisButtonStyle}
