@@ -4,6 +4,7 @@ import IconButton from "@mui/material/IconButton";
 
 import "./Home.css";
 import Question from "./Question";
+import { cdnPrefix } from "./constant";
 
 const Home = () => {
   const [start, setStart] = useState(false);
@@ -21,7 +22,7 @@ const Home = () => {
       <div className="Home-Title">당신의 찰떡궁합 운명의 상대는?</div>
       <div className="Home-Subtitle">영화/드라마 캐릭터 여자 편</div>
       <img
-        src="https://static.kinolights.com/mbti/202307-fate/female-start.png"
+        src={`${cdnPrefix}/female-start.png`}
         className="Home-StartImage"
         alt="start"
       />
