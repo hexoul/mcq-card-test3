@@ -171,7 +171,7 @@ const Result = () => {
         justifyContent="center"
         sx={{
           p: "100px 30px",
-          backgroundImage: `url(${cdnPrefix}/female-r${id}.jpg)`,
+          backgroundImage: `url(${cdnPrefix}/female-r${id}.png)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
