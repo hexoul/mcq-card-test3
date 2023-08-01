@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 
-import { backgroundColor, color, cdnPrefix } from "./constant";
+import { backgroundColor, color, cdnPrefix, homepage } from "./constant";
 import "./Result.css";
 
 const utm =
@@ -258,24 +258,41 @@ const Result = () => {
             남자 ver 테스트 하기
           </Button>
           <div className="Result-Share">친구에게 공유하기</div>
-          <IconButton
-            color="inherit"
-            component="label"
-            sx={{ backgroundColor: "rgba(37, 48, 74, 0.2)" }}
-            onClick={() =>
-              navigator.clipboard
-                .writeText(
-                  `https://mbti-fate-female.kinolights.com/result/${id}`
-                )
-                .then(() =>
-                  alert(
-                    "주소가 복사되었습니다.\n원하는 곳에 붙여넣기 해주세요."
-                  )
-                )
-            }
-          >
-            <LinkIcon />
-          </IconButton>
+          <div>
+            <Button
+              id="kakaotalk-sharing-btn"
+              disableRipple
+              disableFocusRipple
+              sx={{
+                minWidth: "20px",
+                backgroundImage:
+                  "url(https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                p: "20px",
+                mr: "0.5rem",
+                borderRadius: "50px",
+              }}
+              onClick={() =>
+                window.Kakao.Share.createScrapButton({
+                  container: "#kakaotalk-sharing-btn",
+                  requestUrl: homepage,
+                })
+              }
+            />
+            <IconButton
+              color="inherit"
+              component="label"
+              sx={{ backgroundColor: "rgba(37, 48, 74, 0.2)" }}
+              onClick={() =>
+                navigator.clipboard
+                  .writeText(`${homepage}/result/${id}`)
+                  .then(() => alert("주소가 복사되었습니다.\n원하는 곳에 붙여넣기 해주세요."))
+              }
+            >
+              <LinkIcon />
+            </IconButton>
+          </div>
         </div>
         <Button
           className="Result-Button"
