@@ -276,7 +276,7 @@ const Result = () => {
               onClick={() =>
                 window.Kakao.Share.createScrapButton({
                   container: "#kakaotalk-sharing-btn",
-                  requestUrl: homepage,
+                  requestUrl: `${homepage}/result/${id}`,
                 })
               }
             />
