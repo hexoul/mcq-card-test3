@@ -137,13 +137,6 @@ const buttonStyle = {
   "&:hover": { color, backgroundColor },
 };
 
-const emphasisButtonStyle = {
-  ...buttonStyle,
-  backgroundColor: "rgb(193, 46, 46)",
-  "&:focus": { color, backgroundColor: "rgb(193, 46, 46)" },
-  "&:hover": { color, backgroundColor: "rgb(193, 46, 46)" },
-};
-
 const Result = () => {
   const location = useLocation();
   const id = +location.pathname.split("/")[2];
@@ -230,34 +223,8 @@ const Result = () => {
               mb: 4,
             }}
           />
-          <div>
-            이 캐릭터가 진짜 당신의 운명인가요?
-            <p />
-            👇
-          </div>
-          <Button
-            className="Result-Button"
-            component="a"
-            href={`https://kinolights.com/community/post/yOcfjIkBp0HgxmWux5wy?${
-              fromKakao ? utm.replace("kinolights", "kakao") : utm
-            }`}
-            disableRipple
-            disableFocusRipple
-            sx={emphasisButtonStyle}
-          >
-            확인하고 커피 마시기 ☕️
-          </Button>
-          <Button
-            className="Result-Button"
-            component="a"
-            href="https://mbti-fate-male.kinolights.com"
-            disableRipple
-            disableFocusRipple
-            sx={emphasisButtonStyle}
-          >
-            남자 ver 테스트 하기
-          </Button>
-          <div className="Result-Share">친구에게 공유하기</div>
+          <div>내 운명의 상대 공유하기</div>
+          <p>👇</p>
           <div>
             <Button
               id="kakaotalk-sharing-btn"
@@ -293,6 +260,16 @@ const Result = () => {
               <LinkIcon />
             </IconButton>
           </div>
+          <Button
+            className="Result-Button"
+            component="a"
+            href="https://mbti-fate-male.kinolights.com"
+            disableRipple
+            disableFocusRipple
+            sx={buttonStyle}
+          >
+            남자 ver 테스트 하기
+          </Button>
         </div>
         <Button
           className="Result-Button"
